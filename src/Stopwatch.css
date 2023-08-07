@@ -1,0 +1,63 @@
+body {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://images.pexels.com/photos/301943/pexels-photo-301943.jpeg?cs=srgb&dl=pexels-pixabay-301943.jpg&fm=jpg&_gl=1*1oxu469*_ga*MzU5NzU3MjE5LjE2OTE0MjI4MTU.*_ga_8JE65Q40S6*MTY5MTQyMjgxNi4xLjEuMTY5MTQyMjk3NS4wLjAuMA..");
+  /* background-image: url("https://img.freepik.com/free-photo/psychedelic-paper-shapes-with-copy-space_23-2149378246.jpg?w=1380&t=st=1691301807~exp=1691302407~hmac=25470190baf497d005a6689d914ad841fcc578c61a2d2b4506ae0ff789a64ff7"); */
+}
+.stopwatch-container {
+  text-align: center;  
+  background: transparent;
+  backdrop-filter: blur(10px);
+  backface-visibility: hidden;
+}
+
+.time-display {
+  /* margin: 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5.5rem; /* Adjust the font size as per your preference */
+}
+
+.time-cube,
+.time-cube-flip {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  background: none;
+  width: 180px; /* Increase the width to accommodate larger digits */
+  height: 180px; /* Increase the height to accommodate larger digits */
+  /* border: 2px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 8rem; /* Adjust the font size as per your preference */
+  backdrop-filter: blur(10px);
+}
+
+.time-cube-flip {
+  overflow: hidden;
+}
+
+.time-cube-flip div {
+  animation: flip 1s infinite;
+}
+
+@keyframes flip {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(
+      -60px
+    ); /* Increase the value to match the height of the cube */
+    opacity: 0;
+  }
+}
+
+.task-list {
+  margin-top: 20px;
+}
